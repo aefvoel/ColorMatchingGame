@@ -1,14 +1,14 @@
 //
-//  GameViewController.swift
+//  Game2ViewController.swift
 //  ColorMatchingGame
 //
-//  Created by Toriq Wahid Syaefullah on 11/06/20.
+//  Created by Toriq Wahid Syaefullah on 15/06/20.
 //  Copyright © 2020 Toriq Wahid Syaefullah. All rights reserved.
 //
 
 import UIKit
 
-class GameViewController: UIViewController {
+class Game2ViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -43,7 +43,7 @@ class GameViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        collectionView.register(UINib.init(nibName: "ColorCVCell", bundle: nil), forCellWithReuseIdentifier: "celll")
+        collectionView.register(UINib.init(nibName: "TextCVCell", bundle: nil), forCellWithReuseIdentifier: "text_cell")
         
         randomSwitch()
         Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(update), userInfo: nil, repeats: true)
@@ -78,19 +78,19 @@ class GameViewController: UIViewController {
 
 }
 
-extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension Game2ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         return arrCellData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width  = (view.frame.width)/6
+        let width  = (view.frame.width)/4
         return CGSize(width: width, height: width)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "celll", for: indexPath ) as! ColorCVCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "text_cell", for: indexPath ) as! TextCVCell
         
         cell.configure(with: arrCellData[indexPath.row])
         return cell

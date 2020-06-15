@@ -10,6 +10,11 @@
 		AB67CDBF2492014200339AD9 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB67CDBE2492014200339AD9 /* GameViewController.swift */; };
 		AB67CDC22492048200339AD9 /* ColorCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB67CDC02492048200339AD9 /* ColorCVCell.swift */; };
 		AB67CDC32492048200339AD9 /* ColorCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB67CDC12492048200339AD9 /* ColorCVCell.xib */; };
+		ABAAFCE9249711EF00A6DC40 /* Game2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAAFCE8249711EF00A6DC40 /* Game2ViewController.swift */; };
+		ABAAFCEC2497127C00A6DC40 /* TextCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAAFCEA2497127C00A6DC40 /* TextCVCell.swift */; };
+		ABAAFCED2497127C00A6DC40 /* TextCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABAAFCEB2497127C00A6DC40 /* TextCVCell.xib */; };
+		ABAAFCEF2497134500A6DC40 /* CellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAAFCEE2497134500A6DC40 /* CellData.swift */; };
+		ABAAFCF12497189400A6DC40 /* Game3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAAFCF02497189400A6DC40 /* Game3ViewController.swift */; };
 		ABBBD508248A02A2004E9967 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBBD507248A02A2004E9967 /* AppDelegate.swift */; };
 		ABBBD50A248A02A2004E9967 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBBD509248A02A2004E9967 /* SceneDelegate.swift */; };
 		ABBBD50C248A02A2004E9967 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBBD50B248A02A2004E9967 /* ViewController.swift */; };
@@ -22,6 +27,11 @@
 		AB67CDBE2492014200339AD9 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		AB67CDC02492048200339AD9 /* ColorCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCVCell.swift; sourceTree = "<group>"; };
 		AB67CDC12492048200339AD9 /* ColorCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorCVCell.xib; sourceTree = "<group>"; };
+		ABAAFCE8249711EF00A6DC40 /* Game2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game2ViewController.swift; sourceTree = "<group>"; };
+		ABAAFCEA2497127C00A6DC40 /* TextCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCVCell.swift; sourceTree = "<group>"; };
+		ABAAFCEB2497127C00A6DC40 /* TextCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextCVCell.xib; sourceTree = "<group>"; };
+		ABAAFCEE2497134500A6DC40 /* CellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellData.swift; sourceTree = "<group>"; };
+		ABAAFCF02497189400A6DC40 /* Game3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game3ViewController.swift; sourceTree = "<group>"; };
 		ABBBD504248A02A2004E9967 /* ColorMatchingGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorMatchingGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABBBD507248A02A2004E9967 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABBBD509248A02A2004E9967 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,8 +80,13 @@
 				ABBBD515248A02A3004E9967 /* LaunchScreen.storyboard */,
 				ABBBD518248A02A3004E9967 /* Info.plist */,
 				AB67CDBE2492014200339AD9 /* GameViewController.swift */,
+				ABAAFCE8249711EF00A6DC40 /* Game2ViewController.swift */,
+				ABAAFCF02497189400A6DC40 /* Game3ViewController.swift */,
 				AB67CDC02492048200339AD9 /* ColorCVCell.swift */,
 				AB67CDC12492048200339AD9 /* ColorCVCell.xib */,
+				ABAAFCEA2497127C00A6DC40 /* TextCVCell.swift */,
+				ABAAFCEB2497127C00A6DC40 /* TextCVCell.xib */,
+				ABAAFCEE2497134500A6DC40 /* CellData.swift */,
 			);
 			path = ColorMatchingGame;
 			sourceTree = "<group>";
@@ -134,6 +149,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABAAFCED2497127C00A6DC40 /* TextCVCell.xib in Resources */,
 				AB67CDC32492048200339AD9 /* ColorCVCell.xib in Resources */,
 				ABBBD517248A02A3004E9967 /* LaunchScreen.storyboard in Resources */,
 				ABBBD514248A02A3004E9967 /* Assets.xcassets in Resources */,
@@ -151,8 +167,12 @@
 				AB67CDBF2492014200339AD9 /* GameViewController.swift in Sources */,
 				ABBBD50C248A02A2004E9967 /* ViewController.swift in Sources */,
 				AB67CDC22492048200339AD9 /* ColorCVCell.swift in Sources */,
+				ABAAFCEF2497134500A6DC40 /* CellData.swift in Sources */,
 				ABBBD508248A02A2004E9967 /* AppDelegate.swift in Sources */,
+				ABAAFCF12497189400A6DC40 /* Game3ViewController.swift in Sources */,
+				ABAAFCEC2497127C00A6DC40 /* TextCVCell.swift in Sources */,
 				ABBBD50A248A02A2004E9967 /* SceneDelegate.swift in Sources */,
+				ABAAFCE9249711EF00A6DC40 /* Game2ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

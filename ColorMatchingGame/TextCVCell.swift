@@ -1,16 +1,16 @@
 //
-//  ColorCVCell.swift
+//  TextCVCell.swift
 //  ColorMatchingGame
 //
-//  Created by Toriq Wahid Syaefullah on 11/06/20.
+//  Created by Toriq Wahid Syaefullah on 15/06/20.
 //  Copyright © 2020 Toriq Wahid Syaefullah. All rights reserved.
 //
 
 import UIKit
 
-class ColorCVCell: UICollectionViewCell {
+class TextCVCell: UICollectionViewCell {
     
-    @IBOutlet weak var colorView: UIView!
+    @IBOutlet weak var textLabel: UILabel!
     
     override var isSelected: Bool{
         didSet{
@@ -29,8 +29,8 @@ class ColorCVCell: UICollectionViewCell {
     }
     
     public func configure(with model: cellData) {
-        contentView.backgroundColor = model.color
-        layer.cornerRadius = 10
+        textLabel.textColor = model.color
+        textLabel.text = model.text
     }
     
 }
