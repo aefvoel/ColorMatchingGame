@@ -59,6 +59,26 @@ class Game1ViewController: UIViewController {
             countdown -= 1
             timeLabel.text = String(countdown)
         }
+        
+        if(countdown < 10){
+            startTick()
+        }
+        
+        if(countdown == 0){
+            stopTick()
+            showAlert()
+        }
+    }
+    func showAlert() {
+        let alert = UIAlertController(title: "Game Over", message: "Your Score: \(score)", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Start Again ", style: .cancel, handler: { (_) in
+            self.viewDidLoad()
+            self.viewWillAppear(true)
+        }))
+        alert.addAction(UIAlertAction(title: "Main Menu", style: .default, handler: { (_) in
+            self.performSegue(withIdentifier: "to_menu", sender: self)
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
@@ -98,12 +118,14 @@ extension Game1ViewController: UICollectionViewDelegate, UICollectionViewDataSou
                 score += 1
                 scoreLabel.text = String(score)
                 print("match")
+                playSound(soundName: "correct")
                 collectionView.reloadData()
             }
             else {
                 firstPick = ""
                 secondPick = ""
                 print("not match")
+                playSound(soundName: "wrong")
                 collectionView.reloadData()
             }
         }

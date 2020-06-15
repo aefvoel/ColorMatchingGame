@@ -42,18 +42,27 @@ class GameViewController: UIViewController {
         
         collectionView.delegate = self
         collectionView.dataSource = self
-        
+        arrCellData.shuffle()
         collectionView.register(UINib.init(nibName: "ColorCVCell", bundle: nil), forCellWithReuseIdentifier: "celll")
         
         randomSwitch()
         Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(update), userInfo: nil, repeats: true)
-        startTick()
+        
     }
 
     @objc func update() {
         if(countdown > 0) {
             countdown -= 1
             timeLabel.text = String(countdown)
+        }
+        
+        if(countdown < 10){
+            startTick()
+        }
+        
+        if(countdown == 0){
+            stopTick()
+            showAlert()
         }
     }
     func randomSwitch(){
@@ -75,6 +84,18 @@ class GameViewController: UIViewController {
         qSwitch.layer.cornerRadius = qSwitch.frame.height / 2
         qSwitch.backgroundColor = arrCellData[indexColor].color
         
+    }
+    
+    func showAlert() {
+        let alert = UIAlertController(title: "Game Over", message: "Your Score: \(score)", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Start Again ", style: .cancel, handler: { (_) in
+            self.viewDidLoad()
+            self.viewWillAppear(true)
+        }))
+        alert.addAction(UIAlertAction(title: "Next Game", style: .default, handler: { (_) in
+            self.performSegue(withIdentifier: "to_game1", sender: self)
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
 
 }
@@ -105,6 +126,7 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 score += 1
                 randomSwitch()
             }else{
+                playSound(soundName: "wrong")
                 print("not match")
             }
         } else {
@@ -114,6 +136,7 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 score += 1
                 randomSwitch()
             }else{
+                playSound(soundName: "wrong")
                 print("not match")
             }
         }

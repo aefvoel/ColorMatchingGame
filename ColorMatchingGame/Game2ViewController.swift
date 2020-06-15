@@ -42,7 +42,7 @@ class Game2ViewController: UIViewController {
         
         collectionView.delegate = self
         collectionView.dataSource = self
-        
+        arrCellData.shuffle()
         collectionView.register(UINib.init(nibName: "TextCVCell", bundle: nil), forCellWithReuseIdentifier: "text_cell")
         
         randomSwitch()
@@ -54,7 +54,29 @@ class Game2ViewController: UIViewController {
             countdown -= 1
             timeLabel.text = String(countdown)
         }
+        
+        if(countdown < 10){
+            startTick()
+        }
+        
+        if(countdown == 0){
+            stopTick()
+            showAlert()
+        }
     }
+    
+    func showAlert() {
+        let alert = UIAlertController(title: "Game Over", message: "Your Score: \(score)", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Start Again ", style: .cancel, handler: { (_) in
+            self.viewDidLoad()
+            self.viewWillAppear(true)
+        }))
+        alert.addAction(UIAlertAction(title: "Next Game", style: .default, handler: { (_) in
+            self.performSegue(withIdentifier: "to_game2", sender: self)
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     func randomSwitch(){
         let i = Int.random(in: 0 ... 1)
         i == 0 ? qSwitch.setOn(true, animated: true) : qSwitch.setOn(false, animated: true)
@@ -102,16 +124,20 @@ extension Game2ViewController: UICollectionViewDelegate, UICollectionViewDataSou
                 print("match")
                 score += 1
                 randomSwitch()
+                playSound(soundName: "correct")
             }else{
                 print("not match")
+                playSound(soundName: "wrong")
             }
         } else {
             if indexColor == indexPath.row {
                 print("match")
                 score += 1
                 randomSwitch()
+                playSound(soundName: "correct")
             }else{
                 print("not match")
+                playSound(soundName: "wrong")
             }
         }
         
