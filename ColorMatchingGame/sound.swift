@@ -10,6 +10,7 @@ import Foundation
 import AVFoundation
 
 var player: AVAudioPlayer?
+var player2: AVAudioPlayer?
 
 func playSound(soundName: String ) {
     print("Trying sound")
@@ -31,4 +32,30 @@ func playSound(soundName: String ) {
     } catch let error {
         print(error.localizedDescription)
     }
+}
+
+func startTick() {
+    print("tick")
+    guard let path = Bundle.main.path(forResource: "fastclock", ofType:"mp3") else {
+        print ("File not found")
+        return }
+    let url = URL(fileURLWithPath: path)
+    do {
+        try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+        try AVAudioSession.sharedInstance().setActive(true)
+
+        player2 = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+        
+        guard let player2 = player2 else { return }
+
+        player2.play()
+
+        print("tick")
+    } catch let error {
+        print(error.localizedDescription)
+    }
+}
+
+func stopTick() {
+    player2?.stop()
 }

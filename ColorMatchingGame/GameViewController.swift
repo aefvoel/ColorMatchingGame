@@ -47,6 +47,7 @@ class GameViewController: UIViewController {
         
         randomSwitch()
         Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+        startTick()
     }
 
     @objc func update() {
