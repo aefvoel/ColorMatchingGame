@@ -18,6 +18,8 @@
 		ABAAFD022497BB2600A6DC40 /* opening.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ABAAFCFF2497BB2600A6DC40 /* opening.mp3 */; };
 		ABAAFD032497BB2600A6DC40 /* correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ABAAFD002497BB2600A6DC40 /* correct.mp3 */; };
 		ABAAFD042497BB2600A6DC40 /* end.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ABAAFD012497BB2600A6DC40 /* end.mp3 */; };
+		ABAAFCF324972D2100A6DC40 /* Game1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAAFCF224972D2100A6DC40 /* Game1ViewController.swift */; };
+		ABAAFCF52497363800A6DC40 /* Kurri.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ABAAFCF42497363800A6DC40 /* Kurri.ttf */; };
 		ABBBD508248A02A2004E9967 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBBD507248A02A2004E9967 /* AppDelegate.swift */; };
 		ABBBD50A248A02A2004E9967 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBBD509248A02A2004E9967 /* SceneDelegate.swift */; };
 		ABBBD50C248A02A2004E9967 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBBD50B248A02A2004E9967 /* ViewController.swift */; };
@@ -39,6 +41,8 @@
 		ABAAFCFF2497BB2600A6DC40 /* opening.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = opening.mp3; sourceTree = "<group>"; };
 		ABAAFD002497BB2600A6DC40 /* correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = correct.mp3; sourceTree = "<group>"; };
 		ABAAFD012497BB2600A6DC40 /* end.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = end.mp3; sourceTree = "<group>"; };
+		ABAAFCF224972D2100A6DC40 /* Game1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game1ViewController.swift; sourceTree = "<group>"; };
+		ABAAFCF42497363800A6DC40 /* Kurri.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Kurri.ttf; sourceTree = "<group>"; };
 		ABBBD504248A02A2004E9967 /* ColorMatchingGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorMatchingGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABBBD507248A02A2004E9967 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABBBD509248A02A2004E9967 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +97,7 @@
 				ABAAFCFE2497BB0100A6DC40 /* asset */,
 				ABBBD507248A02A2004E9967 /* AppDelegate.swift */,
 				ABBBD509248A02A2004E9967 /* SceneDelegate.swift */,
+				ABAAFCF42497363800A6DC40 /* Kurri.ttf */,
 				ABBBD50B248A02A2004E9967 /* ViewController.swift */,
 				ABBBD50D248A02A2004E9967 /* Main.storyboard */,
 				ABBBD513248A02A3004E9967 /* Assets.xcassets */,
@@ -100,6 +105,7 @@
 				ABBBD518248A02A3004E9967 /* Info.plist */,
 				D87B22E624976E3700BDF470 /* sound.swift */,
 				AB67CDBE2492014200339AD9 /* GameViewController.swift */,
+				ABAAFCF224972D2100A6DC40 /* Game1ViewController.swift */,
 				ABAAFCE8249711EF00A6DC40 /* Game2ViewController.swift */,
 				ABAAFCF02497189400A6DC40 /* Game3ViewController.swift */,
 				AB67CDC02492048200339AD9 /* ColorCVCell.swift */,
@@ -174,6 +180,8 @@
 				AB67CDC32492048200339AD9 /* ColorCVCell.xib in Resources */,
 				ABBBD517248A02A3004E9967 /* LaunchScreen.storyboard in Resources */,
 				ABAAFD042497BB2600A6DC40 /* end.mp3 in Resources */,
+				ABBBD514248A02A3004E9967 /* Assets.xcassets in Resources */,
+				ABAAFCF52497363800A6DC40 /* Kurri.ttf in Resources */,
 				ABBBD50F248A02A2004E9967 /* Main.storyboard in Resources */,
 				ABAAFD032497BB2600A6DC40 /* correct.mp3 in Resources */,
 				D87B22EE249774F400BDF470 /* Assets.xcassets in Resources */,
@@ -196,6 +204,7 @@
 				ABAAFCF12497189400A6DC40 /* Game3ViewController.swift in Sources */,
 				ABAAFCEC2497127C00A6DC40 /* TextCVCell.swift in Sources */,
 				ABBBD50A248A02A2004E9967 /* SceneDelegate.swift in Sources */,
+				ABAAFCF324972D2100A6DC40 /* Game1ViewController.swift in Sources */,
 				ABAAFCE9249711EF00A6DC40 /* Game2ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
