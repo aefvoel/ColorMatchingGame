@@ -22,6 +22,9 @@
 		ABBBD517248A02A3004E9967 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABBBD515248A02A3004E9967 /* LaunchScreen.storyboard */; };
 		D87B22E724976E3700BDF470 /* sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87B22E624976E3700BDF470 /* sound.swift */; };
 		D87B22EE249774F400BDF470 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABBBD513248A02A3004E9967 /* Assets.xcassets */; };
+		D87B22F224977CDC00BDF470 /* end.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D87B22EF24977CDB00BDF470 /* end.mp3 */; };
+		D87B22F324977CDC00BDF470 /* correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D87B22F024977CDC00BDF470 /* correct.mp3 */; };
+		D87B22F424977CDC00BDF470 /* opening.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D87B22F124977CDC00BDF470 /* opening.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		ABBBD516248A02A3004E9967 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABBBD518248A02A3004E9967 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D87B22E624976E3700BDF470 /* sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sound.swift; sourceTree = "<group>"; };
+		D87B22EF24977CDB00BDF470 /* end.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = end.mp3; path = ../../../end.mp3; sourceTree = "<group>"; };
+		D87B22F024977CDC00BDF470 /* correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = correct.mp3; path = ../../../correct.mp3; sourceTree = "<group>"; };
+		D87B22F124977CDC00BDF470 /* opening.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = opening.mp3; path = ../../../opening.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,9 @@
 				ABAAFCEA2497127C00A6DC40 /* TextCVCell.swift */,
 				ABAAFCEB2497127C00A6DC40 /* TextCVCell.xib */,
 				ABAAFCEE2497134500A6DC40 /* CellData.swift */,
+				D87B22F024977CDC00BDF470 /* correct.mp3 */,
+				D87B22EF24977CDB00BDF470 /* end.mp3 */,
+				D87B22F124977CDC00BDF470 /* opening.mp3 */,
 			);
 			path = ColorMatchingGame;
 			sourceTree = "<group>";
@@ -152,10 +161,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D87B22F224977CDC00BDF470 /* end.mp3 in Resources */,
+				D87B22F424977CDC00BDF470 /* opening.mp3 in Resources */,
 				ABAAFCED2497127C00A6DC40 /* TextCVCell.xib in Resources */,
 				AB67CDC32492048200339AD9 /* ColorCVCell.xib in Resources */,
 				ABBBD517248A02A3004E9967 /* LaunchScreen.storyboard in Resources */,
 				ABBBD50F248A02A2004E9967 /* Main.storyboard in Resources */,
+				D87B22F324977CDC00BDF470 /* correct.mp3 in Resources */,
 				D87B22EE249774F400BDF470 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
