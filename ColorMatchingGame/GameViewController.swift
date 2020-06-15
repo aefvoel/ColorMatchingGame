@@ -99,7 +99,8 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if qSwitch.isOn {
             if indexText == indexPath.row {
-                print("match")
+                print("match 1")
+                playSound(soundName: "correct")
                 score += 1
                 randomSwitch()
             }else{
@@ -107,7 +108,8 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
             }
         } else {
             if indexColor == indexPath.row {
-                print("match")
+                print("match 2")
+                playSound(soundName: "correct")
                 score += 1
                 randomSwitch()
             }else{
